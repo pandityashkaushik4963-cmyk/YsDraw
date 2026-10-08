@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YsDraw - Your Drawing App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
+</head>
+<body>
+
+    <!-- Floating toolbar -->
+    <div class="toolbar" id="toolbar">
+        <div class="brand">YsDraw</div>
+
+        <!-- Drawing tools -->
+        <div class="group tools">
+            <button id="pencil"   class="tool active" title="Pencil (P)"><i class="fa-solid fa-pen"></i></button>
+            <button id="eraser"   class="tool" title="Eraser (E)"><i class="fa-solid fa-eraser"></i></button>
+            <button id="lineTool" class="tool" title="Line (L)"><i class="fa-solid fa-slash"></i></button>
+            <button id="rectTool" class="tool" title="Rectangle (R)"><i class="fa-regular fa-square"></i></button>
+            <button id="ovalTool" class="tool" title="Oval (O)"><i class="fa-regular fa-circle"></i></button>
+            <button id="textTool" class="tool" title="Text (T)"><i class="fa-solid fa-t"></i></button>
+            <button id="fillTool" class="tool" title="Fill bucket (F)"><i class="fa-solid fa-fill-drip"></i></button>
+        </div>
+
+        <!-- Brush size -->
+        <div class="group">
+            <label for="sizeSlider" class="label">Size <span id="sizeValue">5</span></label>
+            <input type="range" id="sizeSlider" min="1" max="50" value="5">
+        </div>
+
+        <!-- Colors -->
+        <div class="group colorSec">
+            <input type="color" id="colorPicker" value="#000000" title="Custom color">
+            <div class="pallets">
+                <div class="color" id="color1" data-color="#fd01ba"></div>
+                <div class="color active" id="color2" data-color="#000000"></div>
+                <div class="color" id="color3" data-color="#ff0000"></div>
+                <div class="color" id="color4" data-color="#00ff00"></div>
+                <div class="color" id="color5" data-color="#0000ff"></div>
+                <div class="color" id="color6" data-color="#ffff00"></div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="group actions">
+            <button id="undoBtn" class="action" title="Undo (Ctrl+Z)"><i class="fa-solid fa-rotate-left"></i></button>
+            <button id="redoBtn" class="action" title="Redo (Ctrl+Y)"><i class="fa-solid fa-rotate-right"></i></button>
+            <button id="saveBtn" class="action" title="Download PNG"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <button id="clr_Scr" class="danger"><i class="fa-solid fa-trash"></i> Clear Screen</button>
+    </div>
+
+    <!-- Main canvas + transparent preview canvas stacked on top (used for shape previews) -->
+    <canvas id="myCanvas"></canvas>
+    <canvas id="previewCanvas"></canvas>
+
+    <script src="App.js"></script>
+</body>
+</html>
