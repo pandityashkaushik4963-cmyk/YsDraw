@@ -1,6 +1,6 @@
 # YsDraw - Paint Web App
 
-A powerful web-based drawing application built with HTML5 Canvas, CSS3, and JavaScript.
+This is my first HTML5 canvas project; I have kept it simple for now but plan to update it gradually. Working on this project helped me learn canvas concepts. I have listed the features I implemented below. Thank you.
 
 ## 🚀 Features
 - **Drawing Tools:** Pencil, Eraser, Line, Rectangle, and Oval.
